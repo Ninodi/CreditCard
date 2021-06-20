@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <div class="card_validation">
+       <div class="card" id="card">
+           <div class="cardtype">
+               <img src="assets/img/sim.png" alt="chip">
+               <img src="assets/img/mastercard.png" alt="mastgercard">
+           </div>
+           <div class="card_number">
+               <span>1</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+               <span>#</span>
+           </div>
+           <div class="cardinfo">
+               <div class="name">
+                   <p>Card Holder</p>
+                   <div id="holderName">Nino Machaidze</div>
+               </div>
+               <div class="card_date">
+                   <p>Expires</p>
+                   <div><span id="month">MM</span>/<span id="year">YY</span></div>
+               </div>
+           </div>
+       </div>
+       <form action="">
+           <div class="cardnumb">
+               <label>Card Number</label>
+                <input type="text" class="notCvv" id="cardNumberValue">
+           </div>
+           <div class="cardname">
+               <label>Card Name</label>
+                <input type="text" class="holderNameValue notCvv">
+           </div>
+           <div class="form_sec">
+               <div class="expdate">
+                   <label>Expiration Date</label>
+                    <div class="dates">
+                        <input type="number" min="01" max="31" step="1" placeholder="Month" class="monthValue notCvv"> 
+                        <input type="number" min="1900" max="2099" step="1" placeholder="Year"  class="yearValue notCvv"/>
+                    </div>
+               </div>
+               <div class="cvv" id="cvv">
+                   <label>CVV</label>
+                   <input class="cvv" type="text">
+               </div>
+           </div>
+           <button id="submit" type="submit">Submit</button>
+       </form>
+   </div>
+
+   <script src="assets/js/main.js"></script>
+</body>
+</html>

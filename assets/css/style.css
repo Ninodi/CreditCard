@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: #CCF3FF;
+}
+
+.card_validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  height: 450px;
+  margin: 130px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(17, 17, 17, 0.5);
+          box-shadow: 0px 10px 30px 0px rgba(17, 17, 17, 0.5);
+  position: relative;
+}
+
+form {
+  width: 100%;
+  height: auto;
+  margin-top: 130px;
+}
+
+input {
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #A7A3A3;
+  border-radius: 4px;
+}
+
+input:focus {
+  border: 3px solid blue;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cardnumb, .cardname {
+  margin-bottom: 20px;
+}
+
+.form_sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.expdate {
+  width: 70%;
+}
+
+.expdate input {
+  width: 45%;
+  margin-right: 5px;
+}
+
+.expdate input::-webkit-input-placeholder {
+  color: #111;
+}
+
+.expdate input:-ms-input-placeholder {
+  color: #111;
+}
+
+.expdate input::-ms-input-placeholder {
+  color: #111;
+}
+
+.expdate input::placeholder {
+  color: #111;
+}
+
+.cvv {
+  width: 30%;
+}
+
+.cvv input {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background-color: #2067F8;
+  border: 1px solid #2067F8;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background-color: rgba(32, 103, 248, 0.9);
+}
+
+.card {
+  width: 400px;
+  height: 230px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-image: url("/assets/img/creditcard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  position: absolute;
+  -webkit-box-shadow: 0 10px 60px 0 rgba(17, 17, 17, 0.5);
+          box-shadow: 0 10px 60px 0 rgba(17, 17, 17, 0.5);
+  top: -25%;
+  left: 10%;
+  -webkit-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
+}
+
+.card.rotate {
+  -webkit-transform-origin: 50%, -50%;
+          transform-origin: 50%, -50%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.cardtype {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardtype img {
+  width: 50px;
+  height: 60px;
+}
+
+.cardtype img:nth-child(2) {
+  width: 60px;
+}
+
+.card_number {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card_number span {
+  color: #fff;
+  font-size: 20px;
+}
+
+.card_number span:nth-child(4n) {
+  margin-right: 30px;
+}
+
+.cardinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.cardinfo div {
+  max-height: 43px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.cardinfo p {
+  color: #BCBABA;
+  margin-bottom: 5px;
+}
+
+.name {
+  width: 78%;
+  padding-left: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card_date {
+  width: 20%;
+  padding-left: 5px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=style.css.map */
