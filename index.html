@@ -12,30 +12,31 @@
        <div class="card" id="card">
            <div class="cardtype">
                <img src="assets/img/sim.png" alt="chip">
-               <img src="assets/img/mastercard.png" alt="mastgercard">
+               <img id="cardType" src="" alt="mastgercard">
            </div>
-           <div class="card_number">
+           <div class="card_number" id="cardNumber">
+               <!-- aaaaaaaaaaaaaaaa -->
+               <!-- <span>1</span>
+               <span>?</span>
+               <span>3</span>
+               <span>4</span>
+               <span>5</span>
+               <span>6</span>
+               <span>7</span>
+               <span>8</span>
+               <span>9</span>
+               <span>0</span>
                <span>1</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
-               <span>#</span>
+               <span>2</span>
+               <span>3</span>
+               <span>4</span>
+               <span>5</span>
+               <span>6</span> -->
            </div>
            <div class="cardinfo">
                <div class="name">
                    <p>Card Holder</p>
-                   <div id="holderName">Nino Machaidze</div>
+                   <div id="holderName"></div>
                </div>
                <div class="card_date">
                    <p>Expires</p>
@@ -43,26 +44,37 @@
                </div>
            </div>
        </div>
+       <div class="back_card">
+           <div class="line"></div>
+           <div class="cvv_code">
+               <p>CVV</p>
+               <div class="cvv_codeline" id="cvv"></div>
+           </div>
+           <img id="back_cardType" class="back_cardtype" src="" alt="visacard">
+       </div>
        <form action="">
            <div class="cardnumb">
                <label>Card Number</label>
-                <input type="text" class="notCvv" id="cardNumberValue">
+                <input type="text" class="notCvv" id="cardNumberValue" maxlength="16" minlength="16">
+                <div class="error numberError">Must Contain Only Numbers</div>
            </div>
            <div class="cardname">
                <label>Card Name</label>
-                <input type="text" class="holderNameValue notCvv">
+                <input type="text" class="holderNameValue notCvv" maxlength="30">
+                <div class="error nameError">Must Contain Only Letters</div>
            </div>
            <div class="form_sec">
                <div class="expdate">
                    <label>Expiration Date</label>
                     <div class="dates">
-                        <input type="number" min="01" max="31" step="1" placeholder="Month" class="monthValue notCvv"> 
-                        <input type="number" min="1900" max="2099" step="1" placeholder="Year"  class="yearValue notCvv"/>
+                        <input type="number" min="01" max="12" step="1" placeholder="Month" class="monthValue notCvv" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2" > 
+                        <input type="number" min="2021" max="2030" step="1" placeholder="Year" class="yearValue notCvv" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4"/>
                     </div>
                </div>
-               <div class="cvv" id="cvv">
+               <div class="cvv" id="cvvCard">
                    <label>CVV</label>
-                   <input class="cvv" type="text">
+                   <input class="cvv" type="text" id="cvvValue" maxlength="3" minlength="3">
+                   <div class="error cvvError">Must Contain Only Numbers</div>
                </div>
            </div>
            <button id="submit" type="submit">Submit</button>

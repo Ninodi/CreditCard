@@ -10,6 +10,7 @@
 body {
   overflow: hidden;
   background-color: #CCF3FF;
+  font-family: sans-serif;
 }
 
 .card_validation {
@@ -28,6 +29,8 @@ body {
   border-radius: 8px;
   -webkit-box-shadow: 0px 10px 30px 0px rgba(17, 17, 17, 0.5);
           box-shadow: 0px 10px 30px 0px rgba(17, 17, 17, 0.5);
+  -webkit-perspective: 4000px;
+          perspective: 4000px;
   position: relative;
 }
 
@@ -122,17 +125,17 @@ button:hover {
   background-size: cover;
   background-repeat: no-repeat, repeat;
   position: absolute;
-  -webkit-box-shadow: 0 10px 60px 0 rgba(17, 17, 17, 0.5);
-          box-shadow: 0 10px 60px 0 rgba(17, 17, 17, 0.5);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(17, 17, 17, 0.5);
+          box-shadow: 0 10px 20px 0 rgba(17, 17, 17, 0.5);
   top: -25%;
   left: 10%;
   -webkit-transition: all 0.7s ease-in;
   transition: all 0.7s ease-in;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .card.rotate {
-  -webkit-transform-origin: 50%, -50%;
-          transform-origin: 50%, -50%;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -173,6 +176,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
 }
 
 .card_number span {
@@ -210,11 +214,11 @@ button:hover {
 
 .cardinfo p {
   color: #BCBABA;
-  margin-bottom: 5px;
 }
 
 .name {
   width: 78%;
+  height: 100%;
   padding-left: 10px;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -223,8 +227,144 @@ button:hover {
 
 .card_date {
   width: 20%;
+  height: 100%;
   padding-left: 5px;
   border: 1px solid #fff;
   border-radius: 4px;
+}
+
+.back_card {
+  width: 400px;
+  height: 230px;
+  border-radius: 8px;
+  background-image: url("/assets/img/creditcard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  position: absolute;
+  -webkit-box-shadow: 0 10px 60px 0 rgba(17, 17, 17, 0.5);
+          box-shadow: 0 10px 60px 0 rgba(17, 17, 17, 0.5);
+  top: -25%;
+  left: 10%;
+  z-index: -1;
+  -webkit-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
+}
+
+.back_card.visible {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.line {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(204, 204, 204, 0.8);
+}
+
+.cvv_code {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.cvv_code p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cvv_codeline {
+  width: 100%;
+  height: 35px;
+  padding-right: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.back_cardtype {
+  width: 100px;
+  height: 70px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.cardnumb, .cardname, .form_sec {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  right: -55%;
+  top: 40%;
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  color: red;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.error::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  bottom: 25%;
+  width: 20px;
+  height: 20px;
+  z-index: -2;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.error.showError {
+  opacity: 1;
+}
+
+.monthValue::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 /*# sourceMappingURL=style.css.map */
