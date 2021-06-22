@@ -237,7 +237,7 @@ button:hover {
   width: 400px;
   height: 230px;
   border-radius: 8px;
-  background-image: url("/assets/img/creditcard.jpg");
+  background-image: url("../img/creditcard.jpg");
   background-size: cover;
   background-repeat: no-repeat, repeat;
   position: absolute;
